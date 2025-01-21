@@ -17,9 +17,9 @@ public class ProductWriter
         do
         {
             String ID = SafeInput.getNonZeroLenString(sca, "Enter the ID [6 digits] ");
-            String Name = SafeInput.getNonZeroLenString(sca, "Enter the product name: ");
-            String Description = SafeInput.getNonZeroLenString(sca, "Enter the description of the product: ");
-            double Cost = SafeInput.getDouble(sca, "Enter the cost: ");
+            String Name = SafeInput.getNonZeroLenString(sca, "Enter the product name ");
+            String Description = SafeInput.getNonZeroLenString(sca, "Enter the description of the product ");
+            double Cost = SafeInput.getDouble(sca, "Enter the cost of the product ");
 
             Product product = new Product(ID, Name, Description, Cost);
             ProductList.add(product);

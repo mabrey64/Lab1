@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Scanner;
 
 import static java.nio.file.StandardOpenOption.READ;
 
@@ -10,10 +9,9 @@ public class PersonReader
 {
     public static void main(String[] args)
     {
-        Scanner sc = new Scanner(System.in);
         JFileChooser chooser = new JFileChooser();
         File selectedFile;
-        String record = "";
+        String record;
 
         try
         {
@@ -36,9 +34,8 @@ public class PersonReader
                     if (Records.length == 5) {
                         System.out.printf("%-6s %-10s %-12s %-8s %-4s\n", Records[0], Records[1], Records[2], Records[3], Records[4]);
                     } else {
-                        System.out.println("Invalid record format: " + record); // Debugging statement
+                        System.out.println("Invalid record format: " + record);
                     }
-                    // System.out.printf("%-5s %-9s %-11s %-7s %-3s\n", Records[0], Records[1], Records[2], Records[3], Records[4]);
                 }
                 reader.close();
                 System.out.println("\n\nThe file has been read");
