@@ -2,6 +2,7 @@ import java.util.Calendar;
 
 public class Person
 {
+    private static int IDSeed = 0;
     private String ID;
     private String FirstName;
     private String LastName;
@@ -17,6 +18,49 @@ public class Person
         this.YOB = YOB;
     }
 
+    public static int getIDSeed() {
+        return IDSeed;
+    }
+
+    public String getID() {
+        return ID;
+    }
+
+    public String getFirstName() {
+        return FirstName;
+    }
+
+    public String getLastName() {
+        return LastName;
+    }
+
+    public String getTitle() {
+        return Title;
+    }
+
+    public int getYOB() {
+        return YOB;
+    }
+
+    public String setFirstName(String FirstName) {
+        return this.FirstName = FirstName;
+    }
+
+    public String setLastName(String LastName) {
+        return this.LastName = LastName;
+    }
+
+    public String setTitle(String Title) {
+        return this.Title = Title;
+    }
+
+    public int setYOB(int YOB) {
+        return this.YOB = YOB;
+    }
+
+    public static void setIDSeed(int IDSeed) {
+        Person.IDSeed = IDSeed;
+    }
 
 
     @Override
