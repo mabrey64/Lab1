@@ -8,7 +8,6 @@ import java.io.IOException;
  */
 public class Person
 {
-    private static int IDSeed = 1;
     private String ID;
     private String FirstName;
     private String LastName;
@@ -35,9 +34,6 @@ public class Person
     /**
      * All the get methods are used to @return the value of the attribute
      */
-    public static int getIDSeed() {
-        return IDSeed;
-    }
 
     public String getID() {
         return ID;
@@ -79,9 +75,6 @@ public class Person
         return this.YOB = YOB;
     }
 
-    public static void setIDSeed(int IDSeed) {
-        Person.IDSeed = IDSeed;
-    }
 
     /**
      * The toString method is used to convert the record into a string format
