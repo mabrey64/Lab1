@@ -7,7 +7,6 @@
 
 public class Product
 {
-    private static int IDSeed = 0;
     private String ID;
     private String Name;
     private String Description;
@@ -42,16 +41,9 @@ public class Product
      * @return The value of the attributes as a CSV string
      */
     public String toCSV() {
-        return ID + "," + Name + "," + Description + "," + Cost + ",";
+        return ID + "," + Name + "," + Description + "," + Cost;
     }
 
-    /**
-     * All the get methods are used to @return the value of the attribute
-     * @return The value of the attribute
-     */
-    public static int getIDSeed() {
-        return IDSeed;
-    }
 
     public String getName() {
         return Name;
@@ -85,7 +77,4 @@ public class Product
         return this.Cost = cost;
     }
 
-    public static void setIDSeed(int IDSeed) {
-        Product.IDSeed = IDSeed;
-    }
 }

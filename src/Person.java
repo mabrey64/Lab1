@@ -8,7 +8,7 @@ import java.io.IOException;
  */
 public class Person
 {
-    private static int IDSeed = 0;
+    private static int IDSeed = 1;
     private String ID;
     private String FirstName;
     private String LastName;

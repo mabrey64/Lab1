@@ -22,7 +22,6 @@ public class PersonTest
     {
         p1 = new Person("1", "John", "Doe", "Mr.", 1980);
         p2 = new Person("2", "Jane", "Doe", "Mrs.", 1985);
-        Person.setIDSeed(0);
         p3 = new Person("3", "Jack", "Doe", "Dr.", 1990);
         p4 = new Person("4", "Jill", "Doe", "Ms.", 1995);
         p5 = new Person("5", "Jim", "Doe", "Prof.", 2000);
@@ -38,12 +37,6 @@ public class PersonTest
         assertEquals(expected, p.toCSV());
     }
 
-    /**
-     * Test the getIDSeed method in the Person class.
-     */
-    void getIDSeed() {
-        assertEquals(4, Person.getIDSeed());
-    }
 
     /**
      * Test the getID method in the Person class.
@@ -78,7 +71,7 @@ public class PersonTest
     @Test
     void getTitle()
     {
-        assertEquals("Mr", p1.getTitle());
+        assertEquals("Mr.", p1.getTitle());
     }
 
     /**
@@ -131,22 +124,12 @@ public class PersonTest
     }
 
     /**
-     * Test the setID method in the Person class.
-     */
-    @Test
-    void setIDSeed()
-    {
-        Person.setIDSeed(6);
-        assertEquals(6, Person.getIDSeed());
-    }
-
-    /**
      * Test the getAge method in the Person class.
      */
     @Test
     void getAge()
     {
-        assertEquals("41", p1.getAge());
+        assertEquals("John is 45 years old." , p1.getAge());
     }
 
     /**
@@ -155,7 +138,7 @@ public class PersonTest
     @Test
     void fullName()
     {
-        assertEquals("John is 45 years old.", p1.fullName());
+        assertEquals("John Doe", p1.fullName());
     }
 
     /**

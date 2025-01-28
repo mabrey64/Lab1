@@ -22,7 +22,6 @@ public class ProductTest
     {
         pr1 = new Product("1", "Apple", "Fruit", 1.0);
         pr2 = new Product("2", "Banana", "Fruit", 2.0);
-        Product.setIDSeed(0);
         pr3 = new Product("3", "Cherry", "Fruit", 3.0);
         pr4 = new Product("4", "Date", "Fruit", 4.0);
         pr5 = new Product("5", "Elderberry", "Fruit", 5.0);
@@ -38,13 +37,6 @@ public class ProductTest
         assertEquals(expected, p.toCSV());
     }
 
-    /**
-     * Test the getIDSeed method in the Product class.
-     */
-    @Test
-    void getIDSeed() {
-        assertEquals(4, Product.getIDSeed());
-    }
 
     /**
      * Test the getID method in the Product class.
@@ -112,14 +104,5 @@ public class ProductTest
         assertEquals(6.0, pr1.getCost());
     }
 
-    /**
-     * Test the setIDSeed method in the Product class.
-     */
-    @Test
-    void setIDSeed()
-    {
-        Product.setIDSeed(6);
-        assertEquals(6, Product.getIDSeed());
-    }
 
 }
