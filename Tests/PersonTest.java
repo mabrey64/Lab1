@@ -18,6 +18,13 @@ public class PersonTest
         p5 = new Person("5", "Jim", "Doe", "Prof", 2000);
     }
 
+    @Test
+    void testToCSV() {
+        Person p = new Person("1", "Johnny", "Dee", "Mr", 1988);
+        String expected = "1,Johnny,Dee,Mr,1988";
+        assertEquals(expected, p.toCSV());
+    }
+
     void getIDSeed() {
         assertEquals(4, Person.getIDSeed());
     }
@@ -46,14 +53,12 @@ public class PersonTest
         assertEquals("Mr", p1.getTitle());
     }
 
+
     @Test
-    void setID()
+    void setFirstName()
     {
-
-    }
-
-    @Test
-    void setFirstName() {
+        p1.setFirstName("Johnny");
+        assertEquals("Johnny", p1.getFirstName());
     }
 
     @Test

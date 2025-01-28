@@ -1,4 +1,5 @@
 import java.util.Calendar;
+import java.io.IOException;
 
 public class Person
 {
@@ -67,6 +68,11 @@ public class Person
     public String toString() {
         return ID + ", " + FirstName + ", " + LastName + ", " + Title + ", " + YOB;
     }
+
+    public String toCSV() {
+        return ID + "," + FirstName + "," + LastName + "," + Title + "," + YOB;
+    }
+
 
     public String fullName()
     {
