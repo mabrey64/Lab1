@@ -28,6 +28,20 @@ public class Product
     }
 
     /**
+     * The constructor for the Product class if the cost is not provided
+     * @param ID The ID of the product
+     * @param Name The name of the product
+     * @param Description The description of the product
+     */
+
+    public Product(String ID, String Name, String Description)
+    {
+        this.ID = ID;
+        this.Name = Name;
+        this.Description = Description;
+    }
+
+    /**
      * The toString method is used to return the value of the attributes as a string
      * @return The value of the attributes as a string
      */
@@ -35,6 +49,33 @@ public class Product
     public String toString() {
         return ID + ", " + Name + ", " + Description + ", " + Cost;
     }
+
+    /**
+     * ToXML method is used to return the value of the attributes as an XML string
+     * @return The value of the attributes as an XML string
+     */
+    public String toXML() {
+        return "<Product>\n" +
+                "  <ID>" + ID + "</ID>\n" +
+                "  <Name>" + Name + "</Name>\n" +
+                "  <Description>" + Description + "</Description>\n" +
+                "  <Cost>" + Cost + "</Cost>\n" +
+                "</Product>";
+    }
+
+    /**
+     * The toJSON method is used to return the value of the attributes as a JSON string
+     * @return The value of the attributes as a JSON string
+     */
+    public String toJSON() {
+        return "{\n" +
+                "  \"ID\": \"" + ID + "\",\n" +
+                "  \"Name\": \"" + Name + "\",\n" +
+                "  \"Description\": \"" + Description + "\",\n" +
+                "  \"Cost\": " + Cost + "\n" +
+                "}";
+    }
+
 
     /**
      * The toCSV method is used to return the value of the attributes as a CSV string
@@ -45,18 +86,34 @@ public class Product
     }
 
 
+    /**
+     * All the get methods are used to return the value of the attribute.
+     * @return The value of the attribute.
+     */
     public String getName() {
         return Name;
     }
 
+    /**
+     * The getID method is used to return the value of the ID attribute
+     * @return The value of the ID attribute
+     */
     public String getID() {
         return ID;
     }
 
+    /**
+     * The getDescription method is used to return the value of the Description attribute
+     * @return The value of the Description attribute
+     */
     public String getDescription() {
         return Description;
     }
 
+    /**
+     * The getCost method is used to return the value of the Cost attribute
+     * @return The value of the Cost attribute
+     */
     public double getCost() {
         return Cost;
     }
@@ -69,10 +126,18 @@ public class Product
         return this.Name = name;
     }
 
+    /**
+     * The setID method is used to set the value of the ID attribute
+     * @return The value of the ID attribute that was set
+     */
     public String setDescription(String description) {
         return this.Description = description;
     }
 
+    /**
+     * The setCost method is used to set the value of the Cost attribute
+     * @return The value of the Cost attribute that was set
+     */
     public double setCost(double cost) {
         return this.Cost = cost;
     }

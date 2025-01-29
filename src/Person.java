@@ -32,6 +32,22 @@ public class Person
     }
 
     /**
+     * Another constructor for the Person class if the title is not provided
+     * @param ID The ID of the person
+     * @param FirstName The first name of the person
+     * @param LastName The last name of the person
+     * @param YOB The year of birth of the person
+     */
+
+    public Person (String ID, String FirstName, String LastName,  int YOB)
+    {
+        this.ID = ID;
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        this.YOB = YOB;
+    }
+
+    /**
      * All the get methods are used to @return the value of the attribute
      */
 
@@ -83,6 +99,32 @@ public class Person
     @Override
     public String toString() {
         return ID + ", " + FirstName + ", " + LastName + ", " + Title + ", " + YOB;
+    }
+
+    /** toXML method is used to convert the record into an XML format
+     * @return The record in an XML format
+     */
+    public String toXML() {
+        return "<Person>\n" +
+                "  <ID>" + ID + "</ID>\n" +
+                "  <FirstName>" + FirstName + "</FirstName>\n" +
+                "  <LastName>" + LastName + "</LastName>\n" +
+                "  <Title>" + Title + "</Title>\n" +
+                "  <YOB>" + YOB + "</YOB>\n" +
+                "</Person>";
+    }
+
+    /** toJSON method is used to convert the record into a JSON format
+     * @return The record in a JSON format
+     */
+    public String toJSON() {
+        return "{\n" +
+                "  \"ID\": \"" + ID + "\",\n" +
+                "  \"FirstName\": \"" + FirstName + "\",\n" +
+                "  \"LastName\": \"" + LastName + "\",\n" +
+                "  \"Title\": \"" + Title + "\",\n" +
+                "  \"YOB\": " + YOB + "\n" +
+                "}";
     }
 
     /**
