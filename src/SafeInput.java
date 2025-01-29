@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Tom Wulf Tom.Wulf@uc.edu
+ * @author Tom Wulf Tom.Wulf@uc.edu (used, with permission, by Devon Mabrey)
  */
 public class SafeInput 
 {

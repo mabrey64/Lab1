@@ -28,16 +28,32 @@ public class ProductWriter
         } while (!finished);
         try
         {
-            System.out.println("Enter the name of the file that will hold the product list: ");
+            System.out.println("Enter the name of the files that will hold the product list: ");
             String filename = sca.nextLine();
             Path file = Paths.get(filename + ".txt");
+            Path file2 = Paths.get(filename + ".json");
+            Path file3 = Paths.get(filename + ".xml");
             try (BufferedWriter writer = Files.newBufferedWriter(file, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING)) {
                 for (Product product : ProductList) {
                     writer.write(product.toString());
                     writer.newLine();
                 }
             }
-            System.out.println("File has been written successfully.");
+            try (BufferedWriter writer = Files.newBufferedWriter(file2, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING)) {
+                for (Product product : ProductList) {
+                    writer.write(product.toJSON());
+                    writer.newLine();
+
+                }
+            }
+            try (BufferedWriter writer = Files.newBufferedWriter(file3, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING)) {
+                for (Product product : ProductList) {
+                    writer.write(product.toXML());
+                    writer.newLine();
+
+                }
+            }
+            System.out.println("Files has been written successfully.");
         } catch (IOException e) {
             System.out.println("An error has occurred");
             e.printStackTrace();
