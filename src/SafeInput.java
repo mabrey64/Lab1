@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Tom Wulf Tom.Wulf@uc.edu (used, with permission, by Devon Mabrey)
+ * @author Tom Wulf Tom.Wulf@uc.edu, edited by Devon Mabrey
  */
 public class SafeInput 
 {
@@ -33,7 +33,7 @@ public class SafeInput
    }
     /**
      * Get an int value within a specified numeric range
-     * @param pipe - Scanner instance to read the data System.in in most cases
+     * @param pipe - Scanner instance to read the data System.in() in most cases
      * @param prompt - input prompt msg should not include range info
      * @param low - low end of inclusive range
      * @param high - high end of inclusive range
@@ -73,7 +73,7 @@ public class SafeInput
 
     /**
      * Get an int value with no constraints
-     * @param pipe - Scanner instance to read the data System.in in most cases
+     * @param pipe - Scanner instance to read the data System.in() in most cases
      * @param prompt - input prompt msg should not include range info
      * @return - unconstrained int value 
      */
@@ -105,7 +105,7 @@ public class SafeInput
     
     /**
      * get a double value within an inclusive range
-     * @param pipe - Scanner instance to read the data System.in in most cases
+     * @param pipe - Scanner instance to read the data System.in() in most cases
      * @param prompt - input prompt msg should not contain range info
      * @param low - low value inclusive
      * @param high - high value inclusive
@@ -145,7 +145,7 @@ public class SafeInput
     
 /**
      * Get an unconstrained double value
-     * @param pipe - Scanner instance to read the data System.in in most cases
+     * @param pipe - Scanner instance to read the data System.in() in most cases
      * @param prompt - input prompt msg should not contain range info
      * @return  - an unconstrained double value 
      */
@@ -176,7 +176,7 @@ public class SafeInput
     
     /**
      * Get a [Y/N] confirmation from the user
-     * @param pipe - Scanner instance to read the data System.in in most cases
+     * @param pipe - Scanner instance to read the data System.in() in most cases
      * @param prompt -input prompt msg for user does not need [Y/N]
      * @return - true for yes false for no
      */
@@ -202,7 +202,7 @@ public class SafeInput
             }
             else
             {
-                System.out.println("You must answere [Y/N]! " + response );
+                System.out.println("You must answer [Y/N]! " + response );
             }
             
         }while(!gotAVal);
@@ -211,7 +211,7 @@ public class SafeInput
     }
     /**
      * Get a string that matches a RegEx pattern! This is a very powerful method 
-     * @param pipe - Scanner instance to read the data System.in in most cases
+     * @param pipe - Scanner instance to read the data System.in() in most cases
      * @param prompt - prompt for user
      * @param regExPattern - java style RegEx pattern to constrain the input
      * @return a String that matches the RegEx pattern supplied

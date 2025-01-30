@@ -2,7 +2,6 @@
  * The Product class is used to create a Product object. The Product object has the following attributes:
  * ID as int, Name as String, Description as String, Cost as double
  * IDSeed is a static variable that is used to generate a unique ID for each product object
- *
  */
 
 public class Product

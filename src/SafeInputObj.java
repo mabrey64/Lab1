@@ -1,17 +1,39 @@
 import java.util.Scanner;
 
+/**
+ * SafeInputObj is a class that is used to get input from the user in a safe manner
+ * It uses a Scanner object to read the input
+ *
+ */
+
 public class SafeInputObj
 {
+
     private Scanner pipe;
 
+    /**
+     * The default constructor for the SafeInputObj class
+     * It creates a new Scanner object to read the input
+     */
     public SafeInputObj()
     {
         pipe = new Scanner(System.in);
     }
+
+    /**
+     * Constructor that takes a Scanner object as a parameter
+     * @param  scanner - Scanner object to read the input
+     */
     SafeInputObj(Scanner scanner)
     {
         pipe = scanner;
     }
+
+    /**
+     * Get a non-zero length string from the user
+     * @param prompt - prompt that is displayed for the user
+     * @return a non-zero length string
+     */
     public String getNonZeroLenString( String prompt)
     {
         String retString = "";
@@ -24,6 +46,14 @@ public class SafeInputObj
         return retString;
 
     }
+
+    /**
+     * Get an int value within a specified numeric range
+     * @param prompt - input prompt msg should not include range info
+     * @param low - low end of inclusive range
+     * @param high - high end of inclusive range
+     * @return - int value within the inclusive range
+     */
 
     public int getRangedInt(String prompt, int low, int high)
     {
@@ -56,6 +86,12 @@ public class SafeInputObj
 
         return retVal;
     }
+
+    /**
+     * Get an int value with no constraints
+     * @param prompt - input prompt msg should not include range info
+     * @return - int value
+     */
     public int getInt(String prompt)
     {
         int retVal = 0;
@@ -80,6 +116,14 @@ public class SafeInputObj
 
         return retVal;
     }
+
+    /**
+     * Get a double value within a specified numeric range
+     * @param prompt - input prompt msg should not include range info
+     * @param low - low end of inclusive range
+     * @param high - high end of inclusive range
+     * @return - double value within the inclusive range
+     */
     public double getRangedDouble(String prompt, int low, int high)
     {
         double retVal = 0;
@@ -111,6 +155,12 @@ public class SafeInputObj
 
         return retVal;
     }
+
+    /**
+     * Get a double value with no constraints
+     * @param prompt - input prompt msg should not include range info
+     * @return - double value
+     */
     public double getDouble(String prompt)
     {
         double retVal = 0;
@@ -135,6 +185,12 @@ public class SafeInputObj
 
         return retVal;
     }
+
+    /**
+     * Get a yes or no confirmation from the user
+     * @param prompt - input prompt msg should not include range info
+     * @return - true if the user enters Y, false if the user enters N
+     */
     public boolean getYNConfirm(String prompt)
     {
         boolean retVal = true;
@@ -164,6 +220,13 @@ public class SafeInputObj
 
         return retVal;
     }
+
+    /**
+     * Get a string that matches a regular expression pattern
+     * @param prompt - input prompt msg should not include range info
+     * @param regExPattern - regular expression pattern that the input must match
+     * @return - a string that matches the regular expression pattern
+     */
     public String getRegExString(String prompt, String regExPattern)
     {
         String response = "";

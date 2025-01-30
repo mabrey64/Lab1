@@ -1,3 +1,12 @@
+/**
+ * This class is used to write the product list to a file.
+ * The user is prompted to enter the ID, name, description, and cost of each product.
+ * The program will then display the product list and write it to a .txt file (within the CSV format), a .json file, and a .xml file.
+ * The program will then display the product list after saving the files.
+ * The program will display an error message if the record is not in the correct format.
+ *
+ */
+
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;

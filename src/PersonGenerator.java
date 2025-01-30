@@ -1,3 +1,12 @@
+/**
+ * This class is used to generate a list of people and write them to a file.
+ * The user is prompted to enter the ID, first name, last name, title, and year of birth of each person.
+ * The program will then display the formal name, full name, age in the current year, and age in 2015 of each person.
+ * The user is then prompted to enter the name of the file that will hold the person list.
+ * The program will write the person list to a .txt file (within the CSV format), a .json file, and a .xml file.
+ * The program will then display the person list after saving the files.
+ */
+
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -28,7 +37,7 @@ public class PersonGenerator
             System.out.println("This person's formal name is: " + person.formalName());
             System.out.println("This person's full name is: " + person.fullName());
             System.out.println("This person's age is: " + person.getAge());
-            System.out.println("This peron's age when it was 2015 is: + " + person.getAge(2015));
+            System.out.println("This peron's age when it was 2015 is: " + person.getAge(2015));
 
             finished = SafeInput.getYNConfirm(sc, "Are you finished entering people? ");
         } while (!finished);

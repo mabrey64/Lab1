@@ -1,6 +1,3 @@
-import java.util.Calendar;
-import java.io.IOException;
-
 /**
  * The Person class is used to create a person object with the following attributes
  * ID as int, FirstName & LastName as String, Title as String, and YOB as int
