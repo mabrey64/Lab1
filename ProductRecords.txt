@@ -1,3 +1,3 @@
-554543, Katanas, Japanese Style Swords, 150.0
-445454, Dragon Fruits, Pink Spiked Fruits, 15.0
-123321, Herbs, Mixed Color Healing Grass, 12.0
+454543, Katanas, Japanese Style Weapon, 125.0
+755458, Dragon Fruit, Pink Spiked Ingredient, 25.0
+515142, Fedora, Charm Enhancing Accessory, 32.0

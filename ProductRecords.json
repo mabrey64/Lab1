@@ -1,18 +1,18 @@
 {
-  "ID": "554543",
+  "ID": "454543",
   "Name": "Katanas",
-  "Description": "Japanese Style Swords",
-  "Cost": 150.0
+  "Description": "Japanese Style Weapon",
+  "Cost": 125.0
 }
 {
-  "ID": "445454",
-  "Name": "Dragon Fruits",
-  "Description": "Pink Spiked Fruits",
-  "Cost": 15.0
+  "ID": "755458",
+  "Name": "Dragon Fruit",
+  "Description": "Pink Spiked Ingredient",
+  "Cost": 25.0
 }
 {
-  "ID": "123321",
-  "Name": "Herbs",
-  "Description": "Mixed Color Healing Grass",
-  "Cost": 12.0
+  "ID": "515142",
+  "Name": "Fedora",
+  "Description": "Charm Enhancing Accessory",
+  "Cost": 32.0
 }

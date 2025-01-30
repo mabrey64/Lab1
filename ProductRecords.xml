@@ -1,18 +1,18 @@
 <Product>
-  <ID>554543</ID>
+  <ID>454543</ID>
   <Name>Katanas</Name>
-  <Description>Japanese Style Swords</Description>
-  <Cost>150.0</Cost>
+  <Description>Japanese Style Weapon</Description>
+  <Cost>125.0</Cost>
 </Product>
 <Product>
-  <ID>445454</ID>
-  <Name>Dragon Fruits</Name>
-  <Description>Pink Spiked Fruits</Description>
-  <Cost>15.0</Cost>
+  <ID>755458</ID>
+  <Name>Dragon Fruit</Name>
+  <Description>Pink Spiked Ingredient</Description>
+  <Cost>25.0</Cost>
 </Product>
 <Product>
-  <ID>123321</ID>
-  <Name>Herbs</Name>
-  <Description>Mixed Color Healing Grass</Description>
-  <Cost>12.0</Cost>
+  <ID>515142</ID>
+  <Name>Fedora</Name>
+  <Description>Charm Enhancing Accessory</Description>
+  <Cost>32.0</Cost>
 </Product>

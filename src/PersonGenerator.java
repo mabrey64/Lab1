@@ -18,7 +18,7 @@ import java.util.Scanner;
 
 public class PersonGenerator
 {
-    public void main(String[] args)
+    public static void main(String[] args)
     {
         String filename = "document";
         String pattern = "\\A(?!\\s*\\Z).+";
