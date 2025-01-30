@@ -18,18 +18,23 @@ import java.util.Scanner;
 
 public class PersonGenerator
 {
-    public static void main(String[] args)
+    public void main(String[] args)
     {
+        String filename = "document";
+        String pattern = "\\A(?!\\s*\\Z).+";
+        String prompt = "Enter the name of the file that will hold the product list: ";
+
+        SafeInputObj safeInputObj = new SafeInputObj();
         Scanner sc = new Scanner(System.in);
         ArrayList<Person> PersonList = new ArrayList<>();
         boolean finished;
         do
         {
-            String ID = SafeInput.getNonZeroLenString(sc, "Enter the ID [6 digits] ");
-            String FirstName = SafeInput.getNonZeroLenString(sc, "Enter their first name: ");
-            String LastName = SafeInput.getNonZeroLenString(sc, "Enter their last name: ");
-            String Title = SafeInput.getNonZeroLenString(sc, "Enter their title: ");
-            int YOB = SafeInput.getRangedInt(sc, "Enter their year of birth: ", 1940, 2025);
+            String ID = safeInputObj.getNonZeroLenString("Enter the ID [6 digits] ");
+            String FirstName = safeInputObj.getNonZeroLenString("Enter their first name: ");
+            String LastName = safeInputObj.getNonZeroLenString("Enter their last name: ");
+            String Title = safeInputObj.getNonZeroLenString("Enter their title: ");
+            int YOB = safeInputObj.getRangedInt("Enter their year of birth: ", 1940, 2025);
 
             Person person = new Person(ID, FirstName, LastName, Title, YOB);
             PersonList.add(person);
@@ -43,8 +48,7 @@ public class PersonGenerator
         } while (!finished);
         try
         {
-            System.out.println("Enter the name of the files that will hold the person list: ");
-            String filename = sc.nextLine();
+            filename = safeInputObj.getRegExString(prompt, pattern);
             Path file = Paths.get(filename + ".txt");
             Path file2 = Paths.get(filename + ".json");
             Path file3 = Paths.get(filename + ".xml");

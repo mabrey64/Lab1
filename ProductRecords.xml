@@ -1,0 +1,18 @@
+<Product>
+  <ID>554543</ID>
+  <Name>Katanas</Name>
+  <Description>Japanese Style Swords</Description>
+  <Cost>150.0</Cost>
+</Product>
+<Product>
+  <ID>445454</ID>
+  <Name>Dragon Fruits</Name>
+  <Description>Pink Spiked Fruits</Description>
+  <Cost>15.0</Cost>
+</Product>
+<Product>
+  <ID>123321</ID>
+  <Name>Herbs</Name>
+  <Description>Mixed Color Healing Grass</Description>
+  <Cost>12.0</Cost>
+</Product>

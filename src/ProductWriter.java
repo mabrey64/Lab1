@@ -14,31 +14,36 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
 public class ProductWriter
 {
+
     public static void main(String[] args)
     {
-        Scanner sca = new Scanner(System.in);
+        String filename = "document";
+        String pattern = "\\A(?!\\s*\\Z).+";
+        String prompt = "Enter the name of the file that will hold the product list: ";
+
+        SafeInputObj safeInputObj = new SafeInputObj();
         ArrayList<Product> ProductList = new ArrayList<>();
         boolean finished;
         do
         {
-            String ID = SafeInput.getNonZeroLenString(sca, "Enter the ID [6 digits] ");
-            String Name = SafeInput.getNonZeroLenString(sca, "Enter the product name ");
-            String Description = SafeInput.getNonZeroLenString(sca, "Enter the description of the product ");
-            double Cost = SafeInput.getDouble(sca, "Enter the cost of the product ");
+            String ID = safeInputObj.getNonZeroLenString("Enter the ID [6 digits] ");
+            String Name = safeInputObj.getNonZeroLenString("Enter the product name ");
+            String Description = safeInputObj.getNonZeroLenString("Enter the description of the product ");
+            double Cost = safeInputObj.getDouble("Enter the cost of the product ");
 
             Product product = new Product(ID, Name, Description, Cost);
             ProductList.add(product);
 
-            finished = SafeInput.getYNConfirm(sca, "Are you finished entering products? ");
+            finished = safeInputObj.getYNConfirm("Are you finished entering products? ");
         } while (!finished);
         try
         {
-            System.out.println("Enter the name of the files that will hold the product list: ");
-            String filename = sca.nextLine();
+            filename = safeInputObj.getRegExString(prompt, pattern);
             Path file = Paths.get(filename + ".txt");
             Path file2 = Paths.get(filename + ".json");
             Path file3 = Paths.get(filename + ".xml");

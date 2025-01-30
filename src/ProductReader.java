@@ -58,7 +58,7 @@ public class ProductReader
                 /**
                  * Read the records from the file and display them under the table headers
                   */
-               
+
                 while ((record = reader.readLine()) != null)
                 {
                     String[] Records = record.split(", ");

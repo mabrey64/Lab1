@@ -1,0 +1,3 @@
+554543, Katanas, Japanese Style Swords, 150.0
+445454, Dragon Fruits, Pink Spiked Fruits, 15.0
+123321, Herbs, Mixed Color Healing Grass, 12.0
