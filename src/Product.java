@@ -78,10 +78,11 @@ public class Product
 
     /**
      * The toCSV method is used to return the value of the attributes as a CSV string
+     * This method isn't used as the toString method is used to return the value of the attributes as a string with a space in between the commas.
      * @return The value of the attributes as a CSV string
      */
     public String toCSV() {
-        return ID + "," + Name + "," + Description + "," + Cost;
+        return ID + ", " + Name + ", " + Description + ", " + Cost;
     }
 
 

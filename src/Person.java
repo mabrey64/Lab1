@@ -126,10 +126,11 @@ public class Person
 
     /**
      * The toCSV method is used to convert the record into a CSV format
+     * This isn't used as the ToString method is used to convert the record into a string format with a space in between the commas.
      * @return The record in a CSV format
      */
     public String toCSV() {
-        return ID + "," + FirstName + "," + LastName + "," + Title + "," + YOB;
+        return ID + ", " + FirstName + ", " + LastName + ", " + Title + ", " + YOB;
     }
 
     /**

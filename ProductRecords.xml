@@ -1,18 +1,18 @@
 <Product>
-  <ID>454543</ID>
-  <Name>Katanas</Name>
-  <Description>Japanese Style Weapon</Description>
-  <Cost>125.0</Cost>
+  <ID>555443</ID>
+  <Name>Katana</Name>
+  <Description>Motivating Weaponry</Description>
+  <Cost>555.0</Cost>
 </Product>
 <Product>
-  <ID>755458</ID>
+  <ID>415745</ID>
   <Name>Dragon Fruit</Name>
-  <Description>Pink Spiked Ingredient</Description>
-  <Cost>25.0</Cost>
+  <Description>Spikey Pink Ingredient</Description>
+  <Cost>30.0</Cost>
 </Product>
 <Product>
-  <ID>515142</ID>
+  <ID>777969</ID>
   <Name>Fedora</Name>
   <Description>Charm Enhancing Accessory</Description>
-  <Cost>32.0</Cost>
+  <Cost>64.0</Cost>
 </Product>

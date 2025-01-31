@@ -1,18 +1,18 @@
 {
-  "ID": "454543",
-  "Name": "Katanas",
-  "Description": "Japanese Style Weapon",
-  "Cost": 125.0
+  "ID": "555443",
+  "Name": "Katana",
+  "Description": "Motivating Weaponry",
+  "Cost": 555.0
 }
 {
-  "ID": "755458",
+  "ID": "415745",
   "Name": "Dragon Fruit",
-  "Description": "Pink Spiked Ingredient",
-  "Cost": 25.0
+  "Description": "Spikey Pink Ingredient",
+  "Cost": 30.0
 }
 {
-  "ID": "515142",
+  "ID": "777969",
   "Name": "Fedora",
   "Description": "Charm Enhancing Accessory",
-  "Cost": 32.0
+  "Cost": 64.0
 }
